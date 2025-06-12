@@ -4,6 +4,7 @@ body {
   color: #eee;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 * {
@@ -15,27 +16,6 @@ body {
 html, body {
   width: 100%;
   overflow-x: hidden;
-}
-
-
-.splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%
-  background: black;
-  color: red;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  animation: fadeOut 2s ease 2s forwards;
-}
-
-@keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
 }
 
 .sidebar {

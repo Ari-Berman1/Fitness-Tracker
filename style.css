@@ -6,6 +6,18 @@ body {
   display: flex;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
 .splash {
   position: fixed;
   top: 0;
@@ -27,7 +39,8 @@ body {
 }
 
 .sidebar {
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
   background: #1b1b1b;
   hieght: 100vh;
   padding: 1em;

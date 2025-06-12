@@ -7,8 +7,38 @@
   <link rel="stylesheet", href="style.css" />
 </head>
 <body>
-  <h1>Welcome to the Muscle Factory</h1>
-  <p>Your long-term fitness tracking starts here.</p>
+  <header>
+    <h1>The Muscle Factory</h1>
+    <p>Train. Track. Transform.</p>
+  </header>
+
+  <main>
+    <section id="tracker">
+      <h2>Workout Logger</h2>
+      <div id="workout-form">
+        <label>
+          Excersize:
+          <input type="text" id="excersize" placeholder="e.g. BB Bench Press">
+        </label>
+        <label>
+          Reps:
+          <input type="number" id="reps" min="1" value="10">
+        </label>
+        <label>
+          Weight (lbs):
+          <input type="number" id="weight" min="0" value="0">
+        </label>
+        <button onclick="logWorkout()">Log Workout</button>
+      </div>
+    </section>
+
+    <section id="log">
+      <h2>Workout History</h2>
+      <ul id="history"></ul>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

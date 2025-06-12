@@ -2,43 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Muscle Factory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet", href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <header>
+<body class="dark-theme">
+  <div class="splash">
     <h1>The Muscle Factory</h1>
-    <p>Train. Track. Transform.</p>
-  </header>
+  </div>
 
-  <main>
-    <section id="tracker">
-      <h2>Workout Logger</h2>
-      <div id="workout-form">
-        <label>
-          Excersize:
-          <input type="text" id="excersize" placeholder="e.g. BB Bench Press">
-        </label>
-        <label>
-          Reps:
-          <input type="number" id="reps" min="1" value="10">
-        </label>
-        <label>
-          Weight (lbs):
-          <input type="number" id="weight" min="0" value="0">
-        </label>
-        <button onclick="logWorkout()">Log Workout</button>
-      </div>
-    </section>
+  <div class="sidebar">
+    <div class="logo">🏭</div>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>Workouts</li>
+      <li>Progress</li>
+      <li>Plans</li>
+      <li>Settings</li>
+    </ul>
+    <button onclick="toggleTHeme()">🌗 Theme</button>
+  </div>
 
-    <section id="log">
-      <h2>Workout History</h2>
-      <ul id="history"></ul>
-    </section>
+  <main class="dashboard">
+    <h2>Welcom Back</h2>
+    <div class="widgets">
+      <div class="widget">Workout Duration</div>
+      <div class="widget">PR Streak</div>
+      <div class="widget">Sleep Log</div>
+    </div>
+    <div class="logbook-preview">
+      <h3>Today's Workout</h3>
+      <p>Push Day - Shoulder Oriented</p>
+    </div>
   </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
 </body>
-</html>
+</html>  

@@ -1,3 +1,12 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,100 +15,69 @@
 
 html, body {
   width: 100%;
-  max-width: 100%;
   overflow-x: hidden;
-  background: #111;
-  color: #eee
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
 }
 
 .sidebar {
-  flex-shrink: 0;
-  width: 220px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 220px;
   background: #1b1b1b;
-  height: 100vh;
+  hieght: 100vh;
   padding: 1em;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.sidebar h2 {
-  color: #ff3c3c;
-  margin-bottom: 1em;
+.sidebar .logo {
+  list-style: none;
+  padding: 0;
 }
 
-.sidebar nav a {
-  color: #eee;
-  text-decoration: none;
-  display: block;
-  padding: 0.5em 0;
-  transition: color 0.3s;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-.sidebar nav a:hover {
-  coor: #ff3c3c;
-}
-
-.card {
-  background: rgba(255, 255, 255, .05);
-  padding: 1.5em;
-  border-radius: 12px;
-  margin-bottum: 1.5em;
-  box-shadow: 0 0 8px rgba (255, 60, 60, 0.1);
-  backdrop-filter: blur(6px);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.theme-toggle {
-  margin-top: auto;
+.sidebar ul li {
+  padding: 10px; 
+  margin-bottom: 5px;
   background: #222;
-  border: none;
-  color: #eee;
-  padding: 0.5em;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s;
+  border-left: 4px solid transparent;
+  transition: all 0.2s;
 }
 
-.theme-toggle:hover {
-  background: #333
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  border-left: 4px solid red;
+  background: #333;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  color: #ff3c3c;
+main.dashboard {
+  flex: 1;
+  padding: 2em;
+  background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1em;
-    justify-content: space-around;
-    position: static;
-  }
+.widgets {
+  display: flex;
+  gap: 1em;
+}
 
-  .dashboard {
-    width: 100%
-    padding: 1em;
-  }
+.widget {
+  background: #222;
+  flex: 1;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+}
 
-  .card {
-    margin-bottom: 1em;
-  }
+.logbook-preview {
+  margin-top: 2em;
+  background: #181818;
+  padding: 1em;
+  border-radius: 8px;
 }
